@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="footer-top">
                 <div className="container footer-grid">
                     <div className="footer-brand">
-                        <Link to="/" className="footer-logo">Data<span>iX3</span></Link>
+                        <Link to="/" className="footer-logo"><span className="logo-blue">Data</span><span className="logo-i">i</span><span className="logo-blue">X3</span></Link>
                         <p className="footer-tagline">Business Consulting & Enterprise Technology Solutions</p>
                         <div className="footer-contact-list">
                             <a href="mailto:connect@dataix3.com" className="footer-contact-item">

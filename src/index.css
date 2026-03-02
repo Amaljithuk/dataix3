@@ -330,3 +330,12 @@ img {
     margin-bottom: 40px;
   }
 }
+
+/* Logo colour splits */
+.logo-blue {
+  color: var(--sky-blue);
+}
+
+.logo-i {
+  color: #1a1a2e;
+}
