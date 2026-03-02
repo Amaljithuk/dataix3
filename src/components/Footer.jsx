@@ -1,37 +1,78 @@
+import { Link } from 'react-router-dom';
+import { FaLinkedin, FaInstagram, FaFacebook, FaTwitter, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
+    const year = new Date().getFullYear();
+
     return (
-        <footer className="styles-footer">
-            <div className="container footer-container">
-                <div className="footer-top">
+        <footer className="site-footer">
+            <div className="footer-top">
+                <div className="container footer-grid">
                     <div className="footer-brand">
-                        <h3>Data<span className="blue-text">iX3</span></h3>
-                        <p>Digital Transformation Enabler</p>
+                        <Link to="/" className="footer-logo">Data<span>iX3</span></Link>
+                        <p className="footer-tagline">Business Consulting & Enterprise Technology Solutions</p>
+                        <div className="footer-contact-list">
+                            <a href="mailto:connect@dataix3.com" className="footer-contact-item">
+                                <FaEnvelope /> connect@dataix3.com
+                            </a>
+                            <a href="tel:+918590945369" className="footer-contact-item">
+                                <FaPhone /> +91 8590 945 369
+                            </a>
+                            <span className="footer-contact-item">
+                                <FaMapMarkerAlt /> Kochi, Kerala, India
+                            </span>
+                        </div>
+                        <div className="footer-socials">
+                            <a href="#" aria-label="LinkedIn"><FaLinkedin /></a>
+                            <a href="#" aria-label="Twitter"><FaTwitter /></a>
+                            <a href="#" aria-label="Instagram"><FaInstagram /></a>
+                            <a href="#" aria-label="Facebook"><FaFacebook /></a>
+                        </div>
                     </div>
-                    <div className="footer-links">
-                        <h4>Company</h4>
+
+                    <div className="footer-col">
+                        <h4>Solutions</h4>
                         <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#features">About</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                            <li><Link to="/solutions/erp">ERP Solutions</Link></li>
+                            <li><Link to="/solutions/crm">CRM Platforms</Link></li>
+                            <li><Link to="/solutions/lms">LMS Systems</Link></li>
+                            <li><Link to="/solutions/hr">HR Management</Link></li>
+                            <li><Link to="/solutions/analytics">Data Analytics</Link></li>
+                            <li><Link to="/solutions/web">Web Development</Link></li>
                         </ul>
                     </div>
-                    <div className="footer-links">
+
+                    <div className="footer-col">
                         <h4>Services</h4>
                         <ul>
-                            <li><a href="#">Web Development</a></li>
-                            <li><a href="#">Data Analytics</a></li>
-                            <li><a href="#">Cloud Computing</a></li>
-                            <li><a href="#">Marketing</a></li>
+                            <li><Link to="/services">Business Consulting</Link></li>
+                            <li><Link to="/services">Digital Transformation</Link></li>
+                            <li><Link to="/services">Enterprise Architecture</Link></li>
+                            <li><Link to="/services">Custom Software Dev</Link></li>
+                            <li><Link to="/services">Data Strategy</Link></li>
+                        </ul>
+                    </div>
+
+                    <div className="footer-col">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><Link to="/about">About DataiX3</Link></li>
+                            <li><Link to="/industries">Industries</Link></li>
+                            <li><Link to="/works">Works & Case Studies</Link></li>
+                            <li><Link to="/insights">Insights & Blog</Link></li>
+                            <li><Link to="/partnerships">Partnerships</Link></li>
+                            <li><Link to="/careers">Careers</Link></li>
+                            <li><Link to="/contact">Contact Us</Link></li>
                         </ul>
                     </div>
                 </div>
+            </div>
 
-                <div className="footer-bottom">
-                    <p>&copy; {new Date().getFullYear()} DataiX3. All rights reserved.</p>
-                    <p>Designed for Concept Submission</p>
+            <div className="footer-bottom">
+                <div className="container footer-bottom-inner">
+                    <p>© {year} DataiX3. All rights reserved.</p>
+                    <p>Business Consulting & Enterprise Technology Solutions</p>
                 </div>
             </div>
         </footer>

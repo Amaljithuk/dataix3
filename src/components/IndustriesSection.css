@@ -1,0 +1,74 @@
+.industries-section {
+    background: var(--dark-navy);
+}
+
+.industries-section .section-eyebrow {
+    color: var(--sky-blue);
+}
+
+.industries-section .section-title {
+    color: var(--white);
+}
+
+.industries-section .section-subtitle {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.industries-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.industry-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 28px 24px;
+    transition: background 0.25s, border-color 0.25s, transform 0.25s;
+    cursor: default;
+}
+
+.industry-card:hover {
+    background: rgba(26, 109, 181, 0.15);
+    border-color: rgba(79, 195, 247, 0.3);
+    transform: translateY(-4px);
+}
+
+.industry-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background: rgba(79, 195, 247, 0.12);
+    color: var(--sky-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+}
+
+.industry-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 8px;
+}
+
+.industry-card p {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.6;
+}
+
+@media (max-width: 860px) {
+    .industries-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .industries-grid {
+        grid-template-columns: 1fr;
+    }
+}

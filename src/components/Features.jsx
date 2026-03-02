@@ -1,88 +1,70 @@
 import { motion } from 'framer-motion';
-import { FaShieldAlt, FaUserTie, FaBolt, FaBrain, FaAward, FaHeadset } from 'react-icons/fa';
+import {
+    FaBrain, FaIndustry, FaServer,
+    FaShieldAlt, FaHandshake, FaBolt
+} from 'react-icons/fa';
 import './Features.css';
 
 const features = [
     {
-        id: 1,
         icon: <FaBrain />,
-        title: 'AI-First Approach',
-        desc: 'We integrate cutting-edge Artificial Intelligence into every solution to future-proof your business.',
-        size: 'large' // Spans 2 cols
+        title: 'Strategic Consulting Approach',
+        desc: 'We begin with in-depth business analysis and strategy planning before any implementation — ensuring technology aligns with your goals.',
     },
     {
-        id: 2,
-        icon: <FaBolt />,
-        title: 'High Performance',
-        desc: 'Optimized for speed and scalability.',
-        size: 'medium'
+        icon: <FaIndustry />,
+        title: 'Industry-Specific Solutions',
+        desc: 'Our solutions are tailored to the unique operational requirements of each industry, not generic templates.',
     },
     {
-        id: 3,
+        icon: <FaServer />,
+        title: 'Scalable Architecture',
+        desc: 'Built on enterprise-grade infrastructure that grows with your business — from startup to large enterprise.',
+    },
+    {
         icon: <FaShieldAlt />,
-        title: 'Enterprise Security',
-        desc: 'Bank-grade protection for your data.',
-        size: 'medium'
+        title: 'Secure & Reliable Systems',
+        desc: 'Security-first design with robust uptime guarantees and data protection aligned with compliance standards.',
     },
     {
-        id: 4,
-        icon: <FaUserTie />,
-        title: 'Top 1% Talent',
-        desc: 'Our developers and data scientists are vetted experts.',
-        size: 'medium'
+        icon: <FaHandshake />,
+        title: 'Long-Term Technology Partnership',
+        desc: 'We don\'t just deliver and disappear. We provide ongoing optimization, updates, and strategic guidance.',
     },
     {
-        id: 5,
-        icon: <FaHeadset />,
-        title: '24/7 Dedicated Support',
-        desc: 'We are always here to ensure your systems run smoothly.',
-        size: 'medium'
+        icon: <FaBolt />,
+        title: 'Fast, Outcome-Driven Delivery',
+        desc: 'Agile delivery methodology that focuses on measurable business outcomes at every milestone.',
     },
-    {
-        id: 6,
-        icon: <FaAward />,
-        title: 'Award Winning Design',
-        desc: 'User interfaces that look stunning and convert users.',
-        size: 'medium' // Fits in the remaining 1x1 slot
-    }
 ];
 
 const Features = () => {
     return (
         <section id="features" className="section features-section">
             <div className="container">
-                <div className="features-header text-center mb-5">
-                    <motion.h4
-                        className="blue-caption"
-                        initial={{ opacity: 0, y: -10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                    >
-                        Why Choose DataiX3
-                    </motion.h4>
-                    <motion.h2
-                        className="section-title"
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.1 }}
-                    >
-                        Built for <span className="text-gradient">Growth</span>
-                    </motion.h2>
+                <div className="section-header">
+                    <span className="section-eyebrow">Why Choose DataiX3</span>
+                    <h2 className="section-title">
+                        Built for <span className="text-gradient">Enterprise Success</span>
+                    </h2>
+                    <p className="section-subtitle">
+                        We combine strategic consulting with technical excellence to deliver solutions that drive real business results.
+                    </p>
                 </div>
 
-                <div className="bento-grid">
-                    {features.map((feature, index) => (
+                <div className="features-grid">
+                    {features.map((feat, i) => (
                         <motion.div
-                            key={feature.id}
-                            className={`bento-item ${feature.size}`}
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
+                            key={i}
+                            className="feature-item"
+                            initial={{ opacity: 0, y: 24 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: index * 0.1, duration: 0.5 }}
+                            transition={{ delay: i * 0.08, duration: 0.5 }}
                         >
-                            <div className="bento-icon-box">{feature.icon}</div>
-                            <h3>{feature.title}</h3>
-                            <p>{feature.desc}</p>
-                            <div className="bento-bg-glow"></div>
+                            <div className="feature-icon">{feat.icon}</div>
+                            <h3>{feat.title}</h3>
+                            <p>{feat.desc}</p>
                         </motion.div>
                     ))}
                 </div>
@@ -92,4 +74,3 @@ const Features = () => {
 };
 
 export default Features;
-
