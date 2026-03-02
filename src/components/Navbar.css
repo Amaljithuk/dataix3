@@ -30,6 +30,10 @@
     color: var(--white);
     letter-spacing: -0.5px;
     flex-shrink: 0;
+    background: #ffffff;
+    padding: 4px 10px;
+    border-radius: 6px;
+    line-height: 1;
 }
 
 
