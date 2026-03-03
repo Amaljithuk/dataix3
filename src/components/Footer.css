@@ -15,12 +15,18 @@
 }
 
 .footer-logo {
-    font-family: var(--font-heading);
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: var(--white);
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    background: #ffffff;
+    padding: 4px 8px;
+    border-radius: 6px;
     margin-bottom: 12px;
+}
+
+.footer-logo-img {
+    height: 36px;
+    width: auto;
+    display: block;
 }
 
 .footer-logo span {

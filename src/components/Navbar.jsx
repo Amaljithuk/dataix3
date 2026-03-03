@@ -113,7 +113,7 @@ const Navbar = () => {
             <div className="nav-inner container">
                 {/* Logo */}
                 <Link to="/" className="logo">
-                    <span className="logo-blue">Data</span><span className="logo-i">i</span><span className="logo-blue">X3</span>
+                    <img src="/logo.jpg" alt="DataiX3" className="logo-img" />
                 </Link>
 
                 {/* Desktop Nav */}
