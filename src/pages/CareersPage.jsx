@@ -206,7 +206,9 @@ const CareersPage = () => {
                         </ul>
 
                         <a
-                            href={`mailto:connect@dataix3.com?subject=Application for ${encodeURIComponent(selected.title)}`}
+                            href={`https://mail.google.com/mail/?view=cm&to=connect@dataix3.com&su=Application for ${encodeURIComponent(selected.title)}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="btn btn-primary"
                             style={{ width: '100%', textAlign: 'center', display: 'block' }}
                         >
